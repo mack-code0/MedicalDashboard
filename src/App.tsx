@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: url(${bodyBg});
+    background: url(${bodyBg}), #22262F;
     font-family: 'Raleway';
     background-size: cover;
     height: fit-content;
