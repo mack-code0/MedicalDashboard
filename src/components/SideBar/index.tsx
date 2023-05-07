@@ -9,6 +9,7 @@ import { ReactComponent as GoalsIcon } from "./icons/Goals.svg"
 import { ReactComponent as LogoutIcon } from "./icons/Logout.svg"
 import { ReactComponent as RemindersIcon } from "./icons/Reminders.svg"
 import { ReactComponent as SettingsIcon } from "./icons/Settings.svg"
+import {PlusOutlined} from "@ant-design/icons"
 
 export default function SideBar() {
     const [activeTab, setActiveTab] = useState("Dashboard")
@@ -34,7 +35,7 @@ export default function SideBar() {
                     <GoalsIcon className="icon" /> Goals
                 </button>
                 <button onClick={() => tabHandler("Analytics")} className={`${activeTab === "Analytics" && "active"} link-btn`}>
-                    <RemindersIcon className="icon" /> Reminders
+                    <RemindersIcon className="icon" /> Reminders <PlusOutlined className="ml-auto" /><span className="alert-count ml-3">6</span>
                 </button>
                 <button onClick={() => tabHandler("Inbox")} className={`${activeTab === "Inbox" && "active"} link-btn`}>
                     <SettingsIcon className="icon" /> Settings
@@ -124,11 +125,12 @@ const Styles = styled.div`
         cursor: pointer;
         display: flex;
         align-items: center;
+        justify-content: start;
         padding: 16px 15px;
         margin-top: 17px;
         color: ${props => props.theme.colors.textGrey};
         transition: all 0.2s;
-        width: 170px;
+        width: ${SIZES.sidebarWidth - 70}px;
         border-radius: 12px;
         font-family: 'Poppins';
         font-style: normal;
@@ -148,6 +150,17 @@ const Styles = styled.div`
         .icon{
             margin-right: 20px;
             fill: ${props => props.theme.colors.textGrey};
+        }
+
+        .alert-count{
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            color: ${props => props.theme.colors.alertCountText};
+            background: ${props => props.theme.colors.alertCountBg};
         }
     }
     

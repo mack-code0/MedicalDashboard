@@ -1,5 +1,5 @@
 const SIZES = {
-    sidebarWidth: 250,
+    sidebarWidth: 280,
     font: {
         xs: 11,
         s: 13,
