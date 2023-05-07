@@ -1,4 +1,5 @@
-import { createGlobalStyle } from 'styled-components';
+import LightTheme from './assets/LightTheme';
+import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import bodyBg from "./assets/images/bodyBg.png"
 import DashboardLayout from './layouts/DashboardLayout';
 
@@ -7,23 +8,26 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: url(${bodyBg}), #22262F;
-    font-family: 'Raleway';
+    font-family: 'Poppins';
     background-size: cover;
     height: fit-content;
-    /* background-repeat: no-repeat; */
-    /* background-attachment: fixed; */
   }
 `;
 
 function App() {
 
   return (
-    <>
+    <ThemeProvider theme={LightTheme}>
       <GlobalStyle />
-      <DashboardLayout />
-    </>
+      <BackgroundStyle>
+        <DashboardLayout />
+      </BackgroundStyle>
+    </ThemeProvider>
   )
 }
+
+const BackgroundStyle = styled.div`
+  background: ${props => props.theme.colors.background};
+`
 
 export default App

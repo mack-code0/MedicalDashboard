@@ -16,6 +16,7 @@ const Styles = styled.div`
     overflow-x: hidden;
     .main{
         width: 100vw;
+        height: 100vh;
         margin-left: ${SIZES.sidebarWidth}px;
         @media only screen and (max-width: 992px) {
             margin-left: 0 !important;

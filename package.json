@@ -1,5 +1,5 @@
 {
-  "name": "dashboarddesign",
+  "name": "medicaldashboard",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -16,7 +16,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1",
-    "styled-components": "^5.3.10",
+    "styled-components": "^5.3.6",
     "vite-plugin-svgr": "^2.4.0"
   },
   "devDependencies": {
