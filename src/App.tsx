@@ -1,6 +1,5 @@
 import LightTheme from './assets/LightTheme';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
-import bodyBg from "./assets/images/bodyBg.png"
 import DashboardLayout from './layouts/DashboardLayout';
 import DarkTheme from './assets/DarkTheme';
 
